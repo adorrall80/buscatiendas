@@ -3,8 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
+route::get('/tiendas', function () {
+    return view('listado_tiendas');
+});
+//listado_tiendas.blade
 
 Route::middleware([
     'auth:sanctum',
