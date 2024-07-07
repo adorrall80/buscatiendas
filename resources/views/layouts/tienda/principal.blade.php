@@ -52,10 +52,9 @@
     @component('components.tienda.layout.navegacion')@endcomponent
     <!-- /NAVIGATION -->
 
-	{ <!-- BREADCRUMB -->
+	 <!-- BREADCRUMB -->
 		{{--@component('components.tienda.layout.breadcrumb')@endcomponent--}}
 	<!-- /BREADCRUMB -->
-	<!-- Page -->
 
 <main>
 	@yield('content')

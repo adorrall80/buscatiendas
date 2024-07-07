@@ -11,7 +11,7 @@
                 <li><a href="#">Quienes Somos</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Como registrar tienda</a></li>
-                <li><a href="#">Preciosx</a></li>
+                <li><a href="#">Precios</a></li>
             </ul>
             <!-- /NAV -->
         </div>

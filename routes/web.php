@@ -4,10 +4,17 @@ use App\Http\Controllers\inicioController;
 use Illuminate\Support\Facades\Route;
 
 
-//Route::get('/',function(){   return view('tienda/inicio');});
+Route::get('/informacion',function(){   
+    return view('tienda/informacion');
+});
 
 
-//Route::resource('tienda.inicio',inicioConroller::class);
+
+
+
+
+   
+//Route::get('/info/{slug}', [InicioController::class, 'info'])->name('inicio.info');
 Route::get('/', [inicioController::class, 'index'])->name('inicio.index');
 
 Route::get('/tiendas', function () {

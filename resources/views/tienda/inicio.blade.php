@@ -3,6 +3,10 @@
 @extends('layouts.tienda.principal')
 
 @section('content')
+
+       
+        
+
   <!-- SECTION -->
   <div class="section">
     <!-- container -->
@@ -10,123 +14,19 @@
         <!-- row -->
         <div class="row">
             <!-- shop -->
+            @foreach ($categorias as $categoria)
             <div class="col-md-3 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
                         <img src="./img/shop01.png" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Tienda <br>Ropa Usada</h3>
+                        <h3>{{ $categoria->nombre }}</h3>
                         <a href="#" class="cta-btn">Ver <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
-            <!-- /shop -->
-
-            <!-- shop -->
-            <div class="col-md-3 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop03.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Reparacion <br>Ropa Usada</h3>
-                        <a href="#" class="cta-btn">Ver<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-
-            <!-- shop -->
-            <div class="col-md-3 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Modificacion<br>Ropa Usada</h3>
-                        <a href="#" class="cta-btn">Ver<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-            <!-- shop -->
-            <div class="col-md-3 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Modificacion<br>Ropa Usada</h3>
-                        <a href="#" class="cta-btn">Ver<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-            <!-- shop -->
-            <div class="col-md-3 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Modificacion<br>Ropa Usada</h3>
-                        <a href="#" class="cta-btn">Ver<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-            <!-- shop -->
-            <div class="col-md-3 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Modificacion<br>Ropa Usada</h3>
-                        <a href="#" class="cta-btn">Ver<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-            <!-- shop -->
-            <div class="col-md-3 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Modificacion<br>Ropa Usada</h3>
-                        <a href="#" class="cta-btn">Ver<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-            <!-- shop -->
-            <div class="col-md-3 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Modificacion<br>Ropa Usada</h3>
-                        <a href="#" class="cta-btn">Ver<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-            <!-- shop -->
-            <div class="col-md-3 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Modificacion<br>Ropa Usada</h3>
-                        <a href="#" class="cta-btn">Ver<i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
             <!-- /shop -->
         </div>
         <!-- /row -->

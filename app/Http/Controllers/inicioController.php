@@ -21,7 +21,13 @@ class inicioController extends Controller
        
          
     }
+    public function info($slug)
+    {
+        $categoria = categoria::where('slug', $slug)->first();
+        return view('tienda/info', compact('categoria'));
+    }
 
+  
     /**
      * Show the form for creating a new resource.
      */
