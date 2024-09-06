@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\categoria;
+use App\Models\informacion;
 
 class inicioController extends Controller
 {
@@ -22,10 +23,20 @@ class inicioController extends Controller
          
     }
     public function info($slug)
-    {
-        $categoria = categoria::where('slug', $slug)->first();
-        return view('tienda/info', compact('categoria'));
+    {       
+            $informacion = informacion::where('slug', $slug)->first();
+            
+           if (!$informacion) {
+                abort(404, 'Categoría no encontrada');
+            }
+       // return view('tienda/informacion');
+            return view('tienda.informacion', compact('informacion'));
+        
+        
     }
+   
+   
+   
 
   
     /**

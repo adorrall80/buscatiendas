@@ -18,7 +18,8 @@ class CategoriaSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
+        // Crear una instancia de Faker
+          $faker = Faker::create();
 
         // Ejemplo de categorías predefinidas
         $categorias = [
