@@ -13,14 +13,31 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->integer('rut')->unique();
             $table->string('name');
+            $table->string('last_name');
+            $table->string('phone');
             $table->string('email')->unique();
+            $table->unsignedBigInteger('id_region')->nullable(); // Debe ser unsignedBigInteger
+            $table->unsignedBigInteger('id_comuna')->nullable(); // Debe ser unsignedBigInteger
+            $table->string('address');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
+
+            $table->foreign('id_region')
+                ->references('id') // Asegúrate de que el campo en 'regiones' es 'id'
+                ->on('regiones')
+                ->onDelete('set null'); // Borra el valor de id_region si la región es eliminada
+            
+           // $table->foreign('id_comuna')->references('id')->on('comunas')->onDelete('set null'); // Borra el valor de id_comuna si la comuna es eliminada
+
+
+
+ 
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
@@ -37,6 +54,12 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+
+
+        
+         
+
+
     }
 
     /**
@@ -47,5 +70,9 @@ return new class extends Migration
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign(['id_region']);
+            $table->dropColumn('id_region');
+        });
     }
 };

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<table border="0">
+<table border="0" align="center">
     <tr>
         <td style="width: 300px; height: 100px;"><!-- product -->
             <div class="product">

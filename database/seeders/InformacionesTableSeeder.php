@@ -29,12 +29,12 @@ class InformacionesTableSeeder extends Seeder
         // Genera un array con registros de datos
         $informaciones = [];
         foreach ($titulos as $titulo) {
-            $slug = $faker->slug;
+            $slug = str()->slug($titulo);
             $informaciones[] = [
                 'titulo' => $titulo,
                 'descripcion' => $faker->paragraph,
                 'imagen' => $faker->imageUrl,
-                'slug' => $faker->slug,
+                'slug' => $slug,
                 'created_at' => now(),
                 'updated_at' => now(),
             ];
